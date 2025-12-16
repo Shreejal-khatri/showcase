@@ -77,7 +77,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mb-6">
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/Shreejal-khatri" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-stone-300 rounded-sm flex items-center justify-center text-stone-600 hover:border-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300"
@@ -86,7 +86,7 @@ export default function Footer() {
                 <Github size={18} />
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/shreejal-khatri-652b4526a" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-stone-300 rounded-sm flex items-center justify-center text-stone-600 hover:border-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300"
