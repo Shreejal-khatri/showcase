@@ -14,6 +14,15 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ stats, scrollToSection }: HeroSectionProps) {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/FinalCVs.pdf';
+    link.download = 'Shreejal_Khatri_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center px-6 lg:px-12 pt-32">
       <div className="max-w-7xl mx-auto w-full">
@@ -38,7 +47,10 @@ export default function HeroSection({ stats, scrollToSection }: HeroSectionProps
             </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button className="group flex items-center space-x-2 px-6 py-3 bg-stone-900 text-white rounded-sm hover:bg-stone-800 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95">
+              <button 
+                onClick={handleDownloadResume}
+                className="group flex items-center space-x-2 px-6 py-3 bg-stone-900 text-white rounded-sm hover:bg-stone-800 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
+              >
                 <Download size={18} />
                 <span className="tracking-wider text-sm">DOWNLOAD RESUME</span>
               </button>
