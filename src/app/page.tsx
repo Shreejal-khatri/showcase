@@ -23,7 +23,6 @@ interface Project {
   tech: string[];
   image: string;
   github: string;
-  live: string;
 }
 
 interface Technology {
@@ -63,7 +62,7 @@ export default function Portfolio() {
   const [animatedProgress, setAnimatedProgress] = useState<Record<string, boolean>>({});
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  // Initialize styles as a string constant
+  //Initialize styles as a string constant
   const globalStyles = `
     @keyframes pulse-slow {
       0%, 100% { opacity: 0.1; }
@@ -75,7 +74,7 @@ export default function Portfolio() {
   `;
 
   useEffect(() => {
-    // Add global styles to document head
+    //Add global styles to document head
     const styleElement = document.createElement('style');
     styleElement.innerHTML = globalStyles;
     document.head.appendChild(styleElement);
@@ -129,44 +128,40 @@ export default function Portfolio() {
     setMenuOpen(false);
   };
 
-  const projects: Project[] = [
-    {
-      title: "KhatriShops",
-      category: "MERN Stack",
-      description: "A full-stack e-commerce platform for online clothing retail featuring secure authentication, eSewa payment integration, product exchange functionality, and comprehensive inventory management.",
-      tech: ["MongoDB", "Express", "React", "Node.js", "eSewa API"],
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Electronic Store",
-      category: "MERN Stack",
-      description: "A full-stack electronic store platform built with the MERN stack, featuring comprehensive inventory management, real-time product tracking, and an intuitive admin dashboard.",
-      tech: ["MongoDB", "Express", "React", "Node.js"],
-      image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&h=600&fit=crop",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Course Management System",
-      category: "Java Desktop Application",
-      description: "A desktop application with Java Swing GUI enabling streamlined course creation, student registration, and academic record management.",
-      tech: ["Java", "MySQL", "JDBC", "Java Swing"],
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Game AI with Unity",
-      category: "Game Development",
-      description: "An intelligent game system implementing Ant Colony Optimization algorithms for dynamic enemy pathfinding and strategic behavior.",
-      tech: ["Unity", "C#", "ACO Algorithm"],
-      image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&h=600&fit=crop",
-      github: "#",
-      live: "#"
-    }
-  ];
+const projects: Project[] = [
+  {
+    title: "Furniture Store",
+    category: "Full Stack",
+    description: "A comprehensive furniture e-commerce platform with Stripe payment integration, shopping cart, user authentication, and order management built with MERN stack.",
+    tech: ["MongoDB", "Express", "React", "Node.js", "Stripe"],
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+    github: "https://github.com/Shreejal-khatri/FurnitureStore"
+  },
+  {
+    title: "KhatriShops",
+    category: "MERN Stack",
+    description: "A full-stack e-commerce platform for online clothing retail featuring secure authentication, eSewa payment integration, product exchange functionality, and comprehensive inventory management.",
+    tech: ["MongoDB", "Express", "React", "Node.js", "eSewa API"],
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+    github: "https://github.com/Shreejal-khatri/clothing_website"
+  },
+  {
+    title: "Electronic Store",
+    category: "MERN Stack",
+    description: "A full-stack electronic store platform built with the MERN stack, featuring comprehensive inventory management, real-time product tracking, and an intuitive admin dashboard.",
+    tech: ["MongoDB", "Express", "React", "Node.js"],
+    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&h=600&fit=crop",
+    github: "https://github.com/Shreejal-khatri/ElectronicStore"
+  },
+  {
+    title: "Course Management System",
+    category: "Java Desktop Application",
+    description: "A desktop application with Java Swing GUI enabling streamlined course creation, student registration, and academic record management.",
+    tech: ["Java", "MySQL", "JDBC", "Java Swing"],
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    github: "https://github.com/Shreejal-khatri/CourseManagementSystem"
+  }
+];
 
   const technologies: Technology[] = [
     { name: "React", level: 95, icon: <Code2 size={16} />, color: "bg-blue-500", description: "Advanced" },
@@ -246,8 +241,8 @@ export default function Portfolio() {
   ];
 
   const stats: Stat[] = [
-    { value: "10+", label: "Projects" },
-    { value: "12+", label: "Technologies" },
+    { value: "5+", label: "Projects" },
+    { value: "10+", label: "Technologies" },
     { value: "100%", label: "Dedication" }
   ];
 

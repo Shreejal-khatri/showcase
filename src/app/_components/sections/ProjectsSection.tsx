@@ -10,7 +10,6 @@ interface Project {
   tech: string[];
   image: string;
   github: string;
-  live: string;
 }
 
 interface ProjectsSectionProps {
@@ -56,7 +55,9 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                 ))}
               </div>
               <a 
-                href={project.github} 
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-stone-900 font-light text-sm group-hover:space-x-3 transition-all duration-300"
               >
                 <span className="tracking-wider">VIEW CODE</span>

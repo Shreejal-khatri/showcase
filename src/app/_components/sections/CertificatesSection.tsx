@@ -23,7 +23,7 @@ export default function CertificatesSection() {
                 <span className="text-xs tracking-widest text-green-600 bg-green-50 px-3 py-1 rounded-full">VERIFIED</span>
               </div>
               <h3 className="text-3xl font-light text-stone-900 mb-2">MERN Stack Training</h3>
-              <p className="text-lg text-stone-600 mb-1">Mindrisers Institute of Technology</p>
+              <p className="text-lg text-stone-600 mb-1">Mindrisers Technology</p>
               <p className="text-sm text-stone-500">Putalisadak, Kathmandu, Nepal</p>
             </div>
             <div className="text-right">
